@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_display_result_of_quiz"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/mistakes"
+    tools:context="com.example.adymihai.quizapp.Question2">
+
+    <TextView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=" Do you think that android is hard and you can ONLY learn this if you are a genius/nerd ? "
+        android:textSize="18sp"
+        />
+
+    <RadioButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="NOT FOR ME"/>
+
+    <RadioButton
+        android:id="@+id/master"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="NOTHING COULD STOP ME! I WILL MASTER THIS!" />
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <Button
+            android:id="@+id/previous2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Previous"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_margin="30dp"
+            android:onClick="back2"/>
+        <Button
+            android:id="@+id/next3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Next"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="30dp"
+            android:onClick="toQuestion4"/>
+
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_display_message"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/ali"
+    tools:context="com.example.adymihai.quizapp.Question1">
+
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="1. Do you like technology?"
+    android:textSize="25sp"
+    android:textColor="@color/colorAccent"
+    android:layout_margin="15dp"/>
+
+   <RadioButton
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:text="NOT REALLY"
+       android:textSize="25sp"
+       android:textColor="@color/colorAccent"
+       android:layout_marginLeft="15dp"/>
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="NO"
+            android:textSize="25sp"
+            android:textColor="@color/colorAccent"
+            android:layout_marginLeft="15dp"/>
+
+        <RadioButton
+            android:id="@+id/radio1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="HELL YEAH!!"
+            android:textSize="25sp"
+            android:textColor="@color/colorAccent"
+            android:layout_marginLeft="15dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <Button
+        android:id="@+id/next1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Next"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="30dp"
+        android:onClick="toQuestion2"/>
+    </RelativeLayout>
+</LinearLayout>
+
+
