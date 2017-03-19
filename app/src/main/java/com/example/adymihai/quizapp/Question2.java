@@ -14,6 +14,7 @@ import static android.R.attr.checked;
 import static android.R.attr.displayOptions;
 import static android.R.attr.name;
 import static com.example.adymihai.quizapp.Question1.score;
+import static com.example.adymihai.quizapp.R.id.checkBox;
 import static com.example.adymihai.quizapp.R.id.next1;
 import static com.example.adymihai.quizapp.R.id.next2;
 
@@ -28,29 +29,29 @@ public class Question2 extends AppCompatActivity {
 
     // open Question3 activity when next2 button is pressed
     public void toQuestion3(View view) {
-        Button next2 = (Button) findViewById(R.id.next2);
-        next2.setOnClickListener(
-                new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
+        score = score + question2();
                         Intent intent2 = new Intent("com.example.adymihai.quizapp.Question3");
                         startActivity(intent2);
                     }
-                }
-        );
-    }
 
-    // go back to Question1
-    public void back(View view) {
-        Button previous1 = (Button) findViewById(R.id.previous1);
-        previous1.setOnClickListener(
-                new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Intent intent3 = new Intent("com.example.adymihai.quizapp.Question1");
-                        startActivity(intent3);
-                    }
-                }
-        );
+public int question2(){
+    score = 0;
+    CheckBox checkBox = (CheckBox) findViewById(R.id.checkBox);
+    boolean isChecked = checkBox.isChecked();
+    if(isChecked){
+        score = score + 10;
     }
+    CheckBox checkBox1 = (CheckBox) findViewById(R.id.checkBox1);
+    boolean isChecked1 = checkBox1.isChecked();
+    if(isChecked1){
+        score = score + 10;
+    }
+    CheckBox checkBox2 = (CheckBox) findViewById(R.id.checkBox2);
+    boolean isChecked2 = checkBox2.isChecked();
+    if(isChecked1){
+        score = score + 10;
+    }
+return score;
+}
+
 }

@@ -8,8 +8,8 @@ import android.widget.Button;
 import android.widget.RadioButton;
 
 import static com.example.adymihai.quizapp.Question1.score;
+import static com.example.adymihai.quizapp.R.id.master;
 import static com.example.adymihai.quizapp.R.id.next2;
-import static com.example.adymihai.quizapp.R.id.previous1;
 
 public class Question3 extends AppCompatActivity {
 
@@ -20,29 +20,18 @@ public class Question3 extends AppCompatActivity {
     }
     // open Question4
     public void toQuestion4(View view) {
-
-        Button next3 = (Button) findViewById(R.id.next3);
-        next3.setOnClickListener(
-                new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
+        score = score + question3();
                         Intent intent5 = new Intent("com.example.adymihai.quizapp.Question4");
                         startActivity(intent5);
                     }
-                }
-        );
+
+public int question3(){
+    score = 0;
+RadioButton master = (RadioButton) findViewById(R.id.master);
+    Boolean isChecked = master.isChecked();
+    if(isChecked){
+        score = score + 10;
     }
-// go to Question2
-    public void back2(View view) {
-        Button previous2 = (Button) findViewById(R.id.previous2);
-        previous2.setOnClickListener(
-                new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Intent intent4 = new Intent("com.example.adymihai.quizapp.Question2");
-                        startActivity(intent4);
-                    }
-                }
-        );
-    }
+    return score;
+}
 }

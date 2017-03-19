@@ -4,12 +4,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/mandela"
     tools:context="com.example.adymihai.quizapp.Question2">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:textColor="#000000"
         android:text="Select your most desired benefits that this kind of job offers "
         android:textSize="18sp" />
 
@@ -17,41 +18,38 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Mobility"
+        android:layout_margin="8dp"
         android:id="@+id/checkBox" />
 
     <CheckBox
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Money"
+        android:layout_margin="8dp"
         android:id="@+id/checkBox2" />
 
     <CheckBox
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="8dp"
         android:text="The amazing oportunity to actually make something useful with the time you spend in front of a computer and also being paid for it"
-       android:id="@+id/checkBox1"
+        android:id="@+id/checkBox1"
         />
-       <RelativeLayout
-           android:layout_width="match_parent"
-           android:layout_height="match_parent">
-       <Button
-           android:id="@+id/previous1"
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:text="Previous"
-           android:layout_alignParentBottom="true"
-           android:layout_alignParentLeft="true"
-           android:layout_margin="30dp"
-           android:onClick="back"/>
-           <Button
-               android:id="@+id/next2"
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:text="Next"
-               android:layout_alignParentBottom="true"
-               android:layout_alignParentRight="true"
-               android:layout_margin="30dp"
-               android:onClick="toQuestion3"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/mandela"
+        android:layout_margin="8dp">
 
-       </RelativeLayout>
+        <Button
+            android:id="@+id/next2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Next"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="30dp"
+            android:onClick="toQuestion3"/>
+
+    </RelativeLayout>
 </LinearLayout>

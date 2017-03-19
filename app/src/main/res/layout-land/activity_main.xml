@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/genius"
     tools:context="com.example.adymihai.quizapp.MainActivity">
 
     <TextView
@@ -15,38 +14,34 @@
         android:text="Motivation Quiz"
         android:textSize="50dp"
         android:textAlignment="center"
-        android:textColor="@color/colorAccent"
         />
     <TextView
+        android:id="@+id/text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Will you be  a great developer?Answer these 4 scientifically proven questions"
-        android:layout_margin="14dp"
+        android:layout_margin="8dp"
         android:textAlignment="center"
-        android:textSize="18sp"
-        android:textColor="@color/colorAccent"/>
+        android:textSize="18sp" />
 
 
-    <EditText
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/edit_message"
-        android:hint="Enter your name"
-        android:textColor="@color/colorAccent"/>
-<RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <Button
-        android:id="@+id/start"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="START"
-        android:layout_alignParentBottom="true"
-        android:layout_centerInParent="true"
-        android:layout_margin="18dp"
-        android:onClick="startQuiz"
-        android:textColor="@color/colorAccent"/>
-</RelativeLayout>
+        android:layout_height="match_parent"
+        android:background="@drawable/code"
+        android:layout_margin="8dp">
+        <Button
+            android:id="@+id/start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="START"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="18dp"
+            android:onClick="startQuiz"
+            />
+    </RelativeLayout>
 
 
 </LinearLayout>
+
